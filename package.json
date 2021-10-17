@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node index.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +27,8 @@
     "crypto-symbol": "^1.0.17",
     "cryptocurrency-icons": "^0.18.0",
     "rxjs": "^5.4.2",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "typescript": "~2.3.3"
   },
   "devDependencies": {
     "@angular/cli": "1.4.3",
@@ -48,5 +50,9 @@
     "ts-node": "~3.2.0",
     "tslint": "^5.20.1",
     "typescript": "~2.3.3"
+  },
+   "engines": {
+    "node": "14.17.6",
+    "npm": "8.0.0"
   }
 }
